@@ -1,7 +1,7 @@
-require 'bundler/setup'
-require 'omniauth'
-require 'omniauth-discord'
-require 'sinatra'
+require "bundler/setup"
+require "omniauth"
+require "omniauth-discord"
+require "sinatra"
 require "sinatra/reloader"
 
 configure do
@@ -10,10 +10,10 @@ configure do
   set :raise_errors, true
 end
 
-use Rack::Session::Cookie, secret: '123456789'
+use Rack::Session::Cookie, secret: "123456789"
 
 use OmniAuth::Builder do
-  provider :discord, ENV['DISCORD_CLIENT_ID'], ENV['DISCORD_CLIENT_ID'], scope: ENV['SCOPE']
+  provider :discord, ENV["DISCORD_CLIENT_ID"], ENV["DISCORD_CLIENT_ID"], scope: ENV['SCOPE']
 end
 
 get '/' do

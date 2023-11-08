@@ -1,1 +1,1 @@
-require 'omniauth/discord'
+require "omniauth/discord"

@@ -1,4 +1,4 @@
-$LOAD_PATH.push File.expand_path('lib', __dir__)
+$LOAD_PATH.push File.expand_path("lib", __dir__)
 require 'omniauth/discord/version'
 
 Gem::Specification.new do |spec|
